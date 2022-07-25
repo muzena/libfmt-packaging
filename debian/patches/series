@@ -1,0 +1,6 @@
+0001-Build-with-system-googletest.patch
+0002-Privacy-README.rst.patch
+0003-Privacy-GA-in-doc-layout.html.patch
+0004-Doc-unwanted-download-links-in-doc-layout.html.patch
+0005-Doc-unwanted-GitHub-iframe.patch
+#0006-Fix-large-shift-in-uint128_fallback.patch
