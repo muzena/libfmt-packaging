@@ -23,15 +23,14 @@ override_dh_auto_configure-arch:
 
 override_dh_auto_configure-indep:
 
-override_dh_auto_build-indep:
-	mkdir -p bdir/doxyxml
-	doxygen debian/doxygen.conf
-	sphinx-build -Dbreathe_projects.format=../bdir/doxyxml \
-		-Dversion=$(DEB_VERSION) -Drelease=$(DEB_VERSION) -Aversion=$(DEB_VERSION) -Aversions=$(DEB_VERSION) \
-		-b html doc/ bdir/libfmt-doc
-	lessc --clean-css --include-path=/usr/share/javascript/bootstrap/less \
-		doc/fmt.less bdir/libfmt-doc/_static/fmt.css
-	ln -sf /usr/share/javascript/bootstrap/js/bootstrap.min.js bdir/libfmt-doc/_static/bootstrap.min.js
+#override_dh_auto_build-indep:
+#	mkdir -p bdir/doxyxml
+#	doxygen debian/doxygen.conf
+#	sphinx-build -Dbreathe_projects.format=../bdir/doxyxml \
+#		-Dversion=$(DEB_VERSION) -Drelease=$(DEB_VERSION) -Aversion=$(DEB_VERSION) -Aversions=$(DEB_VERSION) \
+#	lessc --clean-css --include-path=/usr/share/javascript/bootstrap/less \
+#		doc/fmt.less bdir/libfmt-doc/_static/fmt.css
+#	ln -sf /usr/share/javascript/bootstrap/js/bootstrap.min.js bdir/libfmt-doc/_static/bootstrap.min.js
 
 override_dh_auto_test-indep:
 
