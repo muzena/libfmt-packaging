@@ -18,7 +18,7 @@ DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 
 override_dh_auto_configure-arch:
 	dh_auto_configure -- \
-		-DFMT_DOC=off -DFMT_PEDANTIC=on -DCMAKE_POSITION_INDEPENDENT_CODE=on \
+		-DFMT_DOC=off -DFMT_PEDANTIC=off -DCMAKE_POSITION_INDEPENDENT_CODE=on \
 		-DBUILD_SHARED_LIBS=on
 
 override_dh_auto_configure-indep:
