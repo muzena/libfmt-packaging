@@ -3,7 +3,7 @@
 include /usr/share/dpkg/pkg-info.mk
 
 %:
-	dh $@ -B bdir
+	dh $@ --buildsystem=cmake --builddirectory=bdir
 
 override_dh_auto_configure-arch:
 	dh_auto_configure -- \
