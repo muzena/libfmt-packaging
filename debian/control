@@ -3,7 +3,7 @@ Section: devel
 Priority: optional
 Maintainer: Shengjing Zhu <zhsj@debian.org>
 Build-Depends:
- debhelper-compat (= 13),
+ debhelper,
 Build-Depends-Arch:
  cmake,
  googletest,
